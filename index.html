@@ -31,7 +31,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 </script>
 
 <script>
-    varcities = [{"type":"Feature","properties":{"name":"Rochester MN","show_on_map":true,"popupContent":"Rochester MN"},
+    var cities = [{"type":"Feature","properties":{"name":"Rochester MN","show_on_map":true,"popupContent":"Rochester MN"},
     "geometry":{"type":"Point","coordinates":[-92.4802,44.0121]}},
     {"type":"Feature","properties":{"name":"Worthington MN","show_on_map":true,"popupContent":"Worthington MN"},
     "geometry":{"type":"Point","coordinates":[-95.59604,43.623255]}},
@@ -65,12 +65,12 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
             }
         }
             
-    varlayerProcessing = {
+    var layerProcessing = {
         pointToLayer:circleConvert,
         onEachFeature:onEachFeature
         }
         
-    varcityLayer =L.geoJSON(cities,layerProcessing).addTo(mymap);
+    var cityLayer =L.geoJSON(cities,layerProcessing).addTo(mymap);
 </script>
 
 </body>
