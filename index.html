@@ -54,23 +54,23 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     {"type":"Feature","properties":{"name":"Minneapolis MN","show_on_map":true,"popupContent":"Minneapolis MN"},
     "geometry":{"type":"Point","coordinates":[-93.2554,44.9782]}}];
     
-    function circleConvert(feature,latlng){ // Turns GeoJSON points into circle markers
-        return newL.CircleMarker(latlng,{radius:5,color:'#FF0000'})
+    function circleConvert(feature, latlng){ // Turns GeoJSON points into circle markers
+        return new L.CircleMarker(latlng, {radius:5, color: '#FF0000'})
     }
     
     function onEachFeature(feature,layer) {// produces popups
         // does this feature have a property named popupContent?
-        if(feature.properties&&feature.properties.popupContent) {
+        if (feature.properties && feature.properties.popupContent) {
             layer.bindPopup(feature.properties.popupContent);
             }
         }
             
     var layerProcessing = {
-        pointToLayer:circleConvert,
-        onEachFeature:onEachFeature
+        pointToLayer: circleConvert,
+        onEachFeature: onEachFeature
         }
         
-    var cityLayer =L.geoJSON(cities,layerProcessing).addTo(mymap);
+    var cityLayer = L.geoJSON(cities,layerProcessing).addTo(mymap);
 </script>
 
 </body>
