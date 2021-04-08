@@ -55,7 +55,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     "geometry":{"type":"Point","coordinates":[-93.2554,44.9782]}}];
     
     function circleConvert(feature,latlng){ // Turns GeoJSON points into circle markers
-        returnnewL.CircleMarker(latlng,{radius:5,color:'#FF0000'})
+        return newL.CircleMarker(latlng,{radius:5,color:'#FF0000'})
     }
     
     function onEachFeature(feature,layer) {// produces popups
