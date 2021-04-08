@@ -19,14 +19,15 @@ crossorigin=""/>
 </div>
 
 <script>
-var mymap = L.map('mapid').setView([-95.913889, 45.586111], 13);
+    // change view point New York Mills MN
+    var mymap = L.map('mapid').setView([-95.3761465, 46.5180161], 13);
 
-// MapBox was giving me trouble so I ended up using OpenStreetMap instead
-// I got the code from this SO post while searching for bugs online 
-// https://stackoverflow.com/questions/37023893/leaflet-js-map-is-not-showing-up
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+    // MapBox was giving me trouble so I ended up using OpenStreetMap instead
+    // I got the code from this SO post while searching for bugs online 
+    // https://stackoverflow.com/questions/37023893/leaflet-js-map-is-not-showing-up
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
 
     var cities = [{"type":"Feature","properties":{"name":"Rochester MN","show_on_map":true,"popupContent":"Rochester MN"},
     "geometry":{"type":"Point","coordinates":[-92.4802,44.0121]}},
