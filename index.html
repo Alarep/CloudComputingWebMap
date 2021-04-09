@@ -19,10 +19,8 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
 </div>
 
 <script>
-    // View point set to Worthington
-    // Method switched from setView to more generic settings
-    // code taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ again
-    var map = L.map('map', { center: [-95.59604,43.623255], zoom: 13});
+    // change view point Worthington
+    var mymap = L.map('mapid').setView([-95.59604,43.623255], 13);
 
     // MapBox was giving me trouble so I ended up using OpenStreetMap instead
     // I got the code from this SO post while searching for bugs online 
@@ -99,7 +97,7 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
         // Worthington
         [-95.59604,43.623255]
     ];
-
+    
     var lineStyle = {
         "dashArray" : [
             10,
