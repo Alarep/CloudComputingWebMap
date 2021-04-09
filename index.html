@@ -13,14 +13,16 @@ crossorigin=""/>
 
 <body>
 
-    <!-- Setting the style in div rather than CSS to avoid all map div's having the same styling if this is expanded 
-     This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
+<!-- Setting the style in div rather than CSS to avoid all map div's having the same styling if this is expanded 
+This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
 <div id="mapid" style="width: 705px; height: 375px">
 </div>
 
 <script>
-    // change view point Worthington
-    var mymap = L.map('mapid').setView([-95.59604,43.623255], 13);
+    // View point set to Worthington
+    // Method switched from setView to more generic settings
+    // code taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ again
+    var map = L.map('map', { center: [-95.59604,43.623255], zoom: 13});
 
     // MapBox was giving me trouble so I ended up using OpenStreetMap instead
     // I got the code from this SO post while searching for bugs online 
@@ -97,6 +99,7 @@ crossorigin=""/>
         // Worthington
         [-95.59604,43.623255]
     ];
+
     var lineStyle = {
         "dashArray" : [
             10,
