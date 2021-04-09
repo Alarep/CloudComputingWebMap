@@ -19,8 +19,8 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
 </div>
 
 <script>
-    // change view point Worthington
-    var mymap = L.map('mapid').setView([-95.59604,43.623255], 13);
+    // View point set to Worthington
+    var mymap = L.map('mapid').setView(new L.LatLng(-95.59604,43.623255), 13);
 
     // MapBox was giving me trouble so I ended up using OpenStreetMap instead
     // I got the code from this SO post while searching for bugs online 
@@ -114,6 +114,9 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
     
     L.polyline(path, fillStyle).addTo(mymap);
     L.polyline(path, lineStyle).addTo(mymap);
+
+    // Leaving as another option
+    // mymap.panto(new L.LatLng(-95.59604,43.623255))
 </script>
 
 </body>
