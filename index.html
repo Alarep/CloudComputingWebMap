@@ -1,8 +1,8 @@
 <head>
 <!-- This is the css portion -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-crossorigin=""/>
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
 
 <!-- Make sure you put this AFTER Leaflet's CSS -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
@@ -15,7 +15,9 @@ crossorigin=""/>
 
 <!-- Setting the style in div rather than CSS to avoid all map div's having the same styling if this is expanded 
 This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
-<div id="mapid" style="width: 705px; height: 375px">
+<div 
+id="mapid" 
+style="width: 705px; height: 375px">
 </div>
 
 <script>
@@ -100,6 +102,7 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
         [43.623255, -95.59604]
     ];
     
+    // Draws a dashed line along the path
     var lineStyle = {
         "dashArray" : [
             10,
@@ -109,13 +112,18 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
         "color":"#0000FF",
     }
     
+    // Draws the solid white line
     var fillStyle = {
         "weight":5, 
         "color": "#FFFFFF"
     }
     
+    // Using two lines to draw the path. 
+    // One line draws a solid white line to overwrite the map colors.
+    // The other draws a dashed line to show the path
     L.polyline(path, fillStyle).addTo(mymap);
     L.polyline(path, lineStyle).addTo(mymap);
+
 </script>
 
 </body>
