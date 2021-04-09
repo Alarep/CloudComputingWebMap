@@ -19,8 +19,10 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
 </div>
 
 <script>
-    // View point set to Worthington
-    var mymap = L.map('mapid').setView([43.623255, -95.59604], 13);
+    // View point set to St. Cloud
+    // Wrong in the class tutorial
+        // The input for setView should be reversed of that of the cities 
+    var mymap = L.map('mapid').setView([45.5579, -94.1632], 13);
 
     // MapBox was giving me trouble so I ended up using OpenStreetMap instead
     // I got the code from this SO post while searching for bugs online 
