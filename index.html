@@ -22,7 +22,7 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
     // View point set to St. Cloud
     // Wrong in the class tutorial
         // The input for setView should be reversed of that of the cities 
-    var mymap = L.map('mapid').setView([45.5579, -94.1632], 13);
+    var mymap = L.map('mapid').setView([45.5579, -94.1632], 5);
 
     // MapBox was giving me trouble so I ended up using OpenStreetMap instead
     // I got the code from this SO post while searching for bugs online 
@@ -116,9 +116,6 @@ This idea was taken from http://duspviz.mit.edu/web-map-workshop/leaflet-js/ -->
     
     L.polyline(path, fillStyle).addTo(mymap);
     L.polyline(path, lineStyle).addTo(mymap);
-
-    // Leaving as another option
-    mymap.panto(new L.LatLng(-95.59604,43.623255))
 </script>
 
 </body>
